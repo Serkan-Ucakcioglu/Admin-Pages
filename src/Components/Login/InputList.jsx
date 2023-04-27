@@ -50,11 +50,13 @@ function InputList() {
           className="block w-full px-4 outline-none py-2 mt-2  bg-white border rounded-md hover:border-black"
         />
       </div>
-      {formErr && (
-        <span className="text-red-500 font-bold ">
-          Email or password is incorrect
-        </span>
-      )}
+      <div className="mt-3">
+        {formErr && (
+          <span className="text-red-500 font-bold ">
+            Email or password is incorrect
+          </span>
+        )}
+      </div>
       <div className="mt-8">
         <button
           type="submit"
