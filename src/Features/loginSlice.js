@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useDispatch } from "react-redux";
 
 const initialState = {
   user: localStorage.getItem("user") | false,
+  count: 0,
 };
 
 export const loginSlice = createSlice({
@@ -10,15 +10,7 @@ export const loginSlice = createSlice({
   initialState,
   reducers: {
     loginCheck: (state, { payload }) => {
-      console.log("se");
-      if (
-        payload.email == "solarvis@gmail.com" &&
-        payload.password == "solarvis123"
-      ) {
-        return (state.user = "solarvis");
-      } else {
-        return false;
-      }
+      console.log("te");
     },
   },
 });

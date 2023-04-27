@@ -8,7 +8,7 @@ function Login() {
   const onSubmit = (e) => {
     e.preventDefault();
     console.log("submit");
-    dispatch(loginCheck({ email: "serkan" }));
+    dispatch(loginCheck(1));
   };
   return (
     <div className="flex justify-center mb-4">
