@@ -1,15 +1,7 @@
 import React from "react";
 import InputList from "./InputList";
-import { loginCheck } from "../../Features/loginSlice";
-import { useDispatch } from "react-redux";
 
 function Login() {
-  const dispatch = useDispatch();
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log("submit");
-    dispatch(loginCheck({ email: "ad@gmail.com", password: "asdas" }));
-  };
   return (
     <div className="flex justify-center mb-4">
       <div className="w-[500px] flex flex-col justify-center min-h-screen overflow-hidden">
@@ -17,9 +9,9 @@ function Login() {
           <h1 className="text-3xl font-semibold text-center text-black">
             Sign in
           </h1>
-          <form className="mt-6" onSubmit={onSubmit}>
+          <div className="mt-6">
             <InputList />
-          </form>
+          </div>
         </div>
       </div>
     </div>
