@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const user = localStorage.getItem("user");
+
 const initialState = {
-  user: localStorage.getItem("user") | false,
+  user: user || null,
   formErr: false,
 };
 
@@ -15,11 +17,12 @@ export const loginSlice = createSlice({
         payload.password == "solarvis123"
       ) {
         state.formErr = false;
+        state.user = "solarvis";
         localStorage.setItem("user", JSON.stringify("solarvis"));
-        return true;
       } else {
         state.formErr = true;
       }
+      return;
     },
   },
 });
