@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  loginCheck,
-  selectedErr,
-  selectedUser,
-} from "../../Features/loginSlice";
+import { loginCheck, selectedErr } from "../../Features/loginSlice";
 import { useNavigate } from "react-router-dom";
 
 function InputList() {

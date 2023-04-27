@@ -5,7 +5,7 @@ import { selectedUser } from "../Features/loginSlice";
 
 function RequireAuth() {
   const user = useSelector(selectedUser);
-  if (user) {
+  if (user == "solarvis") {
     return <Outlet />;
   } else {
     return <Navigate to="/" />;

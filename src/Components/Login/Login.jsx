@@ -8,7 +8,7 @@ function Login() {
   const user = useSelector(selectedUser);
   return (
     <>
-      {user ? (
+      {user == "solarvis" ? (
         <Navigate to="/admin" />
       ) : (
         <div className="flex justify-center mb-4">
