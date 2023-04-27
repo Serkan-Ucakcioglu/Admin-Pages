@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { selectedErr } from "../../Features/loginSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { loginCheck, selectedErr } from "../../Features/loginSlice";
 
 function InputList() {
   const formErr = useSelector(selectedErr);
+  const dispatch = useDispatch();
 
   const [login, setLogin] = useState({
     email: "",
@@ -14,6 +15,10 @@ function InputList() {
     setLogin({
       [e.target.type]: e.target.value,
     });
+  };
+
+  const onSubmit = () => {
+    dispatch(loginCheck(login));
   };
   return (
     <>
@@ -53,6 +58,7 @@ function InputList() {
       <div className="mt-8">
         <button
           type="submit"
+          onClick={onSubmit}
           className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none"
         >
           Login
