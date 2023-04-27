@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectedErr } from "../../Features/loginSlice";
 
 function InputList() {
+  const formErr = useSelector(selectedErr);
+
+  const [login, setLogin] = useState({
+    email: "",
+    password: "",
+  });
+
+  const onChanged = (e) => {
+    setLogin({
+      [e.target.type]: e.target.value,
+    });
+  };
   return (
     <>
       <div className="mb-4">
@@ -11,7 +25,9 @@ function InputList() {
           Email
         </label>
         <input
-          type="name"
+          value={login.email}
+          type="email"
+          onChange={onChanged}
           className="block w-full outline-none px-4 py-2 mt-2 bg-white border rounded-md hover:border-black"
         />
       </div>
@@ -23,10 +39,17 @@ function InputList() {
           Password
         </label>
         <input
+          value={login.password}
           type="password"
+          onChange={onChanged}
           className="block w-full px-4 outline-none py-2 mt-2  bg-white border rounded-md hover:border-black"
         />
       </div>
+      {formErr && (
+        <span className="text-red-500 font-bold ">
+          Email or password is incorrect
+        </span>
+      )}
       <div className="mt-8">
         <button
           type="submit"
