@@ -17,7 +17,7 @@ export const router = createHashRouter(
       <Route element={<RequireAuth />}>
         <Route path="/admin" element={<AdminPage />}>
           <Route index element={<Welcome />} />
-          <Route path="app" element={<PageCreate />} />
+          <Route path="create" element={<PageCreate />} />
         </Route>
       </Route>
     </Route>

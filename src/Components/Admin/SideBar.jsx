@@ -29,7 +29,7 @@ function SideBar() {
           </li>
           <li className="w-full rounded hover:bg-gray-300">
             <Link
-              to="app"
+              to="create"
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700"
             >
               <CreatePages />
