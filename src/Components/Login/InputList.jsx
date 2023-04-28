@@ -39,6 +39,7 @@ function InputList() {
         <input
           value={login.email}
           type="email"
+          pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
           name="email"
           onChange={onChanged}
           className="block w-full outline-none px-4 py-2 mt-2 bg-white border rounded-md hover:border-black"
