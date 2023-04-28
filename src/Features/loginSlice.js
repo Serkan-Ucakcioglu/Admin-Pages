@@ -24,10 +24,14 @@ export const loginSlice = createSlice({
       }
       return;
     },
+    logOut: (state) => {
+      state.user = state.user = null;
+      localStorage.removeItem("user");
+    },
   },
 });
 
-export const { loginCheck } = loginSlice.actions;
+export const { loginCheck, logOut } = loginSlice.actions;
 export const selectedUser = (state) => state.loginSlice.user;
 export const selectedErr = (state) => state.loginSlice.formErr;
 export default loginSlice.reducer;

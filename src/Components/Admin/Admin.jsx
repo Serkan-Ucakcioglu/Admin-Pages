@@ -1,11 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { selectedUser } from "../../Features/loginSlice";
+import SideBar from "./SideBar";
 
 function Admin() {
-  const user = useSelector(selectedUser);
-
-  return <div>admin-{user}</div>;
+  return (
+    <div>
+      <SideBar />
+    </div>
+  );
 }
-
 export default Admin;
