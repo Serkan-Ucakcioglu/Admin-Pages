@@ -21,14 +21,15 @@ function InputList() {
     }));
   };
 
-  const onSubmit = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
     dispatch(loginCheck(login));
     if (!formErr) {
       navigate("/admin");
     }
   };
   return (
-    <>
+    <form onSubmit={onSubmit}>
       <div className="mb-4">
         <label
           htmlFor="email"
@@ -69,13 +70,13 @@ function InputList() {
       </div>
       <div className="mt-8">
         <button
-          onClick={onSubmit}
+          type="submit"
           className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none"
         >
           Login
         </button>
       </div>
-    </>
+    </form>
   );
 }
 
