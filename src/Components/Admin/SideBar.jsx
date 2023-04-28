@@ -10,8 +10,6 @@ function SideBar() {
   const dispatch = useDispatch();
 
   const logOuts = () => {
-    console.log("calıstı");
-
     dispatch(logOut());
   };
   return (
