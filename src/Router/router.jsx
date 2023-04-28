@@ -8,7 +8,7 @@ import LoginPage from "../Pages/LoginPage";
 import RequireAuth from "../Components/RequireAuth";
 import AdminPage from "../Pages/AdminPage";
 import Welcome from "../Components/Admin/Welcome";
-import PageCreate from "../Components/Admin/PageCreate";
+import PageCreate from "../Components/Admin/Create/PageCreate";
 
 export const router = createHashRouter(
   createRoutesFromElements(
