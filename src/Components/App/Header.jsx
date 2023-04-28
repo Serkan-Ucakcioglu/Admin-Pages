@@ -1,14 +1,16 @@
 import React from "react";
 
-function App() {
+function Header() {
   return (
     <>
       <header className="w-full flex items-center px-[50px] justify-between h-[85px] shadow">
-        <img
-          className="w-[400] h-[90px]"
-          src="https://solarvisbucket.s3.eu-central-1.amazonaws.com/media/public/logos/electraVis_logo.png"
-          alt="solarvis-logo"
-        />
+        <a href="https://solarvis.co" target="_blank">
+          <img
+            className="h-[75px]"
+            src="https://solarvisbucket.s3.eu-central-1.amazonaws.com/media/public/logos/electraVis_logo.png"
+            alt="solarvis-logo"
+          />
+        </a>
         <a
           href="https://solarvis.co"
           target="_blank"
@@ -21,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default Header;
