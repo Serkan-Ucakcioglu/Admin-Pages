@@ -18,10 +18,16 @@ function SideBar() {
       <div className="w-[230px] bg-gray-100 shadow h-screen p-3">
         <ul className="flex mt-4 h-5/6 items-start flex-col space-y-3">
           <li className="w-full rounded hover:bg-gray-300">
-            <Link className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700">
+            <Link
+              to="/"
+              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700"
+            >
               <Dashboard />
               <span class="ml-3">Dashboard</span>
             </Link>
+          </li>
+          <li>
+            <Link to="app">s</Link>
           </li>
         </ul>
         <div
