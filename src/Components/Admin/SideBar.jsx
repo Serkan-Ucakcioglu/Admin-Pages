@@ -4,6 +4,7 @@ import Dashboard from "../../assets/Dashboard";
 import Logout from "../../assets/Logout";
 import { logOut } from "../../Features/loginSlice";
 import { useDispatch } from "react-redux";
+import CreatePages from "../../assets/CreatePages";
 
 function SideBar() {
   const dispatch = useDispatch();
@@ -26,8 +27,14 @@ function SideBar() {
               <span class="ml-3">Dashboard</span>
             </Link>
           </li>
-          <li>
-            <Link to="app">s</Link>
+          <li className="w-full rounded hover:bg-gray-300">
+            <Link
+              to="app"
+              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700"
+            >
+              <CreatePages />
+              <span class="ml-3">Create Page</span>
+            </Link>
           </li>
         </ul>
         <div
