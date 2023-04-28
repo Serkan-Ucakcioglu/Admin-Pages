@@ -9,6 +9,7 @@ import RequireAuth from "../Components/RequireAuth";
 import AdminPage from "../Pages/AdminPage";
 import Welcome from "../Components/Admin/Welcome";
 import PageCreate from "../Components/Admin/Create/PageCreate";
+import AppPage from "../Pages/AppPage";
 
 export const router = createHashRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ export const router = createHashRouter(
           <Route path="create" element={<PageCreate />} />
         </Route>
       </Route>
+      <Route path="/app" element={<AppPage />} />
     </Route>
   )
 );
