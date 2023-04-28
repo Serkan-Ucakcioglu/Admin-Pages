@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Dashboard from "../../assets/Dashboard";
-import Logout from "../../assets/Logout";
-import { logOut } from "../../Features/loginSlice";
+import Dashboard from "../../../assets/Dashboard";
+import Logout from "../../../assets/Logout";
+import { logOut } from "../../../Features/loginSlice";
 import { useDispatch } from "react-redux";
-import CreatePages from "../../assets/CreatePages";
+import CreatePages from "../../../assets/CreatePages";
 
 function SideBar() {
   const dispatch = useDispatch();
