@@ -1,15 +1,12 @@
 import React from "react";
+import SolarvisLogo from "../../assets/SolarvisLogo";
 
 function Header() {
   return (
     <>
       <header className="w-full flex items-center px-[70px] justify-between h-[90px] shadow-lg">
         <a href="https://solarvis.co" target="_blank">
-          <img
-            className="h-[72px]"
-            src="https://solarvisbucket.s3.eu-central-1.amazonaws.com/media/public/logos/electraVis_logo.png"
-            alt="solarvis-logo"
-          />
+          <SolarvisLogo />
         </a>
         <a
           href="https://solarvis.co"

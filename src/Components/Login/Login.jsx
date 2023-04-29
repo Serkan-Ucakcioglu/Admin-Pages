@@ -3,6 +3,7 @@ import InputList from "./InputList";
 import { useSelector } from "react-redux";
 import { selectedUser } from "../../Features/loginSlice";
 import { Navigate } from "react-router-dom";
+import SolarvisLogo from "../../assets/SolarvisLogo";
 
 function Login() {
   const user = useSelector(selectedUser);
@@ -15,11 +16,7 @@ function Login() {
           <div className="w-[500px] flex flex-col justify-center min-h-screen overflow-hidden">
             <div className="w-full p-7 m-auto  bg-white rounded-md shadow border border-gray-200 lg:max-w-xl">
               <div className="flex justify-center">
-                <img
-                  className="h-[72px]"
-                  src="https://solarvisbucket.s3.eu-central-1.amazonaws.com/media/public/logos/electraVis_logo.png"
-                  alt="solarvis-logo"
-                />
+                <SolarvisLogo />
               </div>
               <div className="mt-6">
                 <InputList />
