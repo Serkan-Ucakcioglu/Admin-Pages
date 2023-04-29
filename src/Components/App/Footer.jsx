@@ -1,0 +1,14 @@
+import React from "react";
+
+function Footer() {
+  return (
+    <div className="w-full h-[30px] absolute bottom-0 flex justify-center bg-[#373242] text-white items-center">
+      Powered by{" "}
+      <a className="ml-2 underline" href="https://solarvis.co/" target="_blank">
+        solarVis
+      </a>
+    </div>
+  );
+}
+
+export default Footer;
