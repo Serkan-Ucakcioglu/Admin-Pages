@@ -71,7 +71,10 @@ function InputList() {
       <div className="mt-8">
         <button
           type="submit"
-          className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none"
+          disabled={login.password.length < 4}
+          className={`w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none ${
+            login.password.length < 4 && "opacity-50"
+          }`}
         >
           Login
         </button>
