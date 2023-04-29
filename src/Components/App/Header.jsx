@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <>
-      <header className="w-full flex items-center px-[50px] justify-between h-[85px] shadow">
+      <header className="w-full flex items-center px-[70px] justify-between h-[85px] shadow-lg">
         <a href="https://solarvis.co" target="_blank">
           <img
             className="h-[75px]"
