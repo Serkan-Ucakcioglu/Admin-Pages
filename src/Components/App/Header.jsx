@@ -14,7 +14,7 @@ function Header() {
         <a
           href="https://solarvis.co"
           target="_blank"
-          className="bg-blue-500 p-2 text-white rounded hover:bg-blue-700"
+          className="bg-blue-500 p-2.5 text-white rounded hover:bg-blue-700"
         >
           Go Solarvis
         </a>
