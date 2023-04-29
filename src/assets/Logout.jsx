@@ -13,7 +13,7 @@ function Logout() {
       >
         <style>
           {
-            ".st0{display:none}.st4{stroke:#000;stroke-width:2;stroke-miterlimit:10}"
+            ".st0{display:none}.st4{stroke:#fff;stroke-width:3;stroke-miterlimit:10}"
           }
         </style>
         <g id="koper">

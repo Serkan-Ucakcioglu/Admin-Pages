@@ -8,36 +8,35 @@ import CreatePages from "../../../assets/CreatePages";
 
 function SideBar() {
   const dispatch = useDispatch();
-
   const logOuts = () => {
     dispatch(logOut());
   };
   return (
     <>
-      <div className="w-[230px] bg-gray-200 shadow h-screen p-3">
+      <div className="w-[230px] bg-gray-800 shadow-2xl h-screen p-3">
         <ul className="flex mt-4 h-5/6 items-start flex-col space-y-3">
-          <li className="w-full rounded hover:bg-gray-300">
+          <li className="w-full border border-white p-1 rounded hover:bg-gray-900">
             <Link
               to="/"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700"
+              className="flex text-white items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700"
             >
               <Dashboard />
               <span class="ml-3">Dashboard</span>
             </Link>
           </li>
-          <li className="w-full rounded hover:bg-gray-300">
+          <li className="w-full border border-white rounded hover:bg-gray-900">
             <Link
               to="create"
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700"
             >
               <CreatePages />
-              <span class="ml-3">Create Page</span>
+              <span class="ml-3 text-white">Create Page</span>
             </Link>
           </li>
         </ul>
         <div
           onClick={logOuts}
-          className="flex justify-center items-center p-1 cursor-pointer hover:bg-gray-300  border border-gray-400  rounded  mt-auto items-end"
+          className="flex justify-center items-center p-1 cursor-pointer text-white hover:bg-gray-900 border border-white  rounded  mt-auto items-end"
         >
           <Logout />
           Log out
