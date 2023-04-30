@@ -2,6 +2,7 @@ import React from "react";
 import StepBtns from "../StepBtns";
 import { useDispatch } from "react-redux";
 import { addStep } from "../../../../Features/loginSlice";
+import StepImg from "./StepImg";
 
 function Step2() {
   const dispatch = useDispatch();
@@ -11,7 +12,10 @@ function Step2() {
   };
   return (
     <form onSubmit={onSubmits}>
-      <h1>step2</h1>
+      <div className="flex">
+        <StepImg />
+        <h1>step2</h1>
+      </div>
       <StepBtns />
     </form>
   );
