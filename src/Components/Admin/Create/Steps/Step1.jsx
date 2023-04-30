@@ -7,7 +7,7 @@ import useForm from "../../../../hooks/useForm";
 
 function Step1() {
   const dispatch = useDispatch();
-  const { form, setForm } = useForm({
+  const { form, onChanged } = useForm({
     Title: "",
     Description: "",
     Url: "",
@@ -19,19 +19,9 @@ function Step1() {
     { name: "Url", type: "url", id: "url" },
   ];
 
-  const onChanged = (event) => {
-    const { name, value } = event.target;
-    setForm((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   const onSubmits = (e) => {
     e.preventDefault();
-    console.log(form, "form");
-
-    //dispatch(addStep(1));
+    dispatch(addStep(1));
   };
   return (
     <form
