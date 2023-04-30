@@ -10,7 +10,7 @@ function Home() {
         {formData?.Title}
       </h1>
 
-      <div className="flex h-[500px] mt-8 justify-center flex-col">
+      <div className="flex h-[600px] mt-8 justify-center flex-col">
         <div className="flex flex-col justify-center items-center">
           <img
             src={formData?.Url}
