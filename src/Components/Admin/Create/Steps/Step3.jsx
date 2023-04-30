@@ -3,6 +3,8 @@ import StepBtns from "../StepBtns";
 import { useDispatch, useSelector } from "react-redux";
 import { addStep, selectedFormData } from "../../../../Features/loginSlice";
 import SolarvisLogo from "../../../../assets/SolarvisLogo";
+import Success from "../../../../assets/Success";
+import { Link } from "react-router-dom";
 
 function Step3() {
   const dispatch = useDispatch();
@@ -17,11 +19,18 @@ function Step3() {
       className="flex flex-col justify-center items-center"
       onSubmit={onSubmits}
     >
-      <div className="flex flex-col items-center">
+      <div className="flex gap-6 flex-col items-center">
         <SolarvisLogo />
-        <h1>step3</h1>
+        <Success />
       </div>
-      <StepBtns />
+      <div className="mt-8">
+        <Link
+          className="p-2 bg-blue-500 hover:bg-blue-700 text-white rounded"
+          to="/app"
+        >
+          Go To App
+        </Link>
+      </div>
     </form>
   );
 }
