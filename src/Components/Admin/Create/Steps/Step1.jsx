@@ -1,7 +1,7 @@
 import React from "react";
 import StepBtns from "../StepBtns";
 import { useDispatch } from "react-redux";
-import { addStep } from "../../../../Features/loginSlice";
+import { addData, addStep } from "../../../../Features/loginSlice";
 import SolarvisLogo from "../../../../assets/SolarvisLogo";
 import useForm from "../../../../hooks/useForm";
 
@@ -23,6 +23,7 @@ function Step1() {
     e.preventDefault();
     if (form.Title !== "" && form.Url !== "" && form.Description.length < 5) {
       setShow(false);
+      dispatch(addData(form));
       dispatch(addStep(1));
     } else {
       setShow(true);
