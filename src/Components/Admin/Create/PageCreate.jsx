@@ -26,7 +26,7 @@ function PageCreate() {
         </h1>
         ---
         <h1 className={`${step == 2 && "bg-blue-500 text-white p-1 rounded"}`}>
-          Page 3
+          OutPut
         </h1>
       </div>
       <>{steps[step]}</>
