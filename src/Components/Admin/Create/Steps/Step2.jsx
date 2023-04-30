@@ -15,9 +15,9 @@ function Step2() {
   const dispatch = useDispatch();
   const formData = useSelector(selectedFormData);
   const { form, onChanged, error, setShow } = useForm({
-    Phone: "",
-    Email: "",
-    Adress: "",
+    Phone: formData?.Phone || 0,
+    Email: formData?.Email || "",
+    Adress: formData.Adress || "",
   });
 
   const onSubmits = (e) => {
