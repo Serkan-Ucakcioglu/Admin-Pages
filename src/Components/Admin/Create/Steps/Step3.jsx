@@ -1,15 +1,17 @@
 import React from "react";
 import StepBtns from "../StepBtns";
-import { useDispatch } from "react-redux";
-import { addStep } from "../../../../Features/loginSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addStep, selectedFormData } from "../../../../Features/loginSlice";
 import SolarvisLogo from "../../../../assets/SolarvisLogo";
 
 function Step3() {
   const dispatch = useDispatch();
+  const formData = useSelector(selectedFormData);
   const onSubmits = (e) => {
     e.preventDefault();
     dispatch(addStep(2));
   };
+
   return (
     <form
       className="flex flex-col justify-center items-center"

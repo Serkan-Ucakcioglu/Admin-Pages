@@ -16,9 +16,9 @@ function Step1() {
   const formData = useSelector(selectedFormData);
 
   const { form, onChanged, error, setShow } = useForm({
-    Title: formData?.Title || "",
-    Description: formData?.Description || "",
-    Url: formData?.Url || "",
+    Title: formData[0]?.Title || "",
+    Description: formData[0]?.Description || "",
+    Url: formData[0]?.Url || "",
   });
 
   const onSubmits = (e) => {

@@ -15,10 +15,12 @@ function Step2() {
   const dispatch = useDispatch();
   const formData = useSelector(selectedFormData);
   const { form, onChanged, error, setShow } = useForm({
-    Phone: formData?.Phone || 0,
-    Email: formData?.Email || "",
-    Adress: formData.Adress || "",
+    Phone: formData[1]?.Phone || 0,
+    Email: formData[1]?.Email || "",
+    Adress: formData[1].Adress || "",
   });
+
+  console.log(formData, "formData");
 
   const onSubmits = (e) => {
     e.preventDefault();
