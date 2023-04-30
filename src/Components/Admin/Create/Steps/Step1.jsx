@@ -7,7 +7,7 @@ import useForm from "../../../../hooks/useForm";
 
 function Step1() {
   const dispatch = useDispatch();
-  const { form, onChanged, error } = useForm({
+  const { form, onChanged, error, show, setShow } = useForm({
     Title: "",
     Description: "",
     Url: "",
@@ -22,9 +22,10 @@ function Step1() {
   const onSubmits = (e) => {
     e.preventDefault();
     if (form.Title !== "" && form.Url !== "" && form.Description.length < 5) {
+      setShow(false);
       dispatch(addStep(1));
     } else {
-      alert("Hata var");
+      setShow(true);
     }
   };
   return (
@@ -55,7 +56,7 @@ function Step1() {
               </div>
             );
           })}
-          <span className="text-red-500">{error}</span>
+          <span className="text-red-500">{show && error}</span>
         </div>
       </div>
       <StepBtns />
