@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectedStep } from "../../../Features/loginSlice";
+import { addStep, selectedStep } from "../../../Features/loginSlice";
 
 function StepBtns() {
   const step = useSelector(selectedStep);
@@ -24,11 +24,11 @@ function StepBtns() {
         </button>
         <p>---</p>
         <button
+          type="submit"
           className={`bg-blue-500 p-1 rounded hover:bg-blue-700 text-white ${
             step == 2 ? "opacity-50" : ""
           }`}
           disabled={step == 2}
-          onClick={() => setStep((step) => step + 1)}
         >
           Next
         </button>
