@@ -4,8 +4,6 @@ import { selectedFormData } from "../../../Features/loginSlice";
 
 function About() {
   const formData = useSelector(selectedFormData)[1];
-  console.log(formData, "about");
-
   return (
     <>
       <h1 className="text-2xl mt-2 text-center font-extrabold">About Page</h1>
