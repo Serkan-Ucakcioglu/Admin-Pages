@@ -1,31 +1,36 @@
 import React from "react";
 import StepBtns from "../StepBtns";
-import { useDispatch } from "react-redux";
-import { addData, addStep } from "../../../../Features/loginSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addData,
+  addStep,
+  selectedFormData,
+} from "../../../../Features/loginSlice";
 import SolarvisLogo from "../../../../assets/SolarvisLogo";
 import useForm from "../../../../hooks/useForm";
 import StepInput from "./StepInput";
+import { step1 } from "../../../../Data/data";
 
 function Step1() {
   const dispatch = useDispatch();
-  const { form, onChanged, error, setShow } = useForm({
-    Title: "",
-    Description: "",
-    Url: "",
-  });
+  const formData = useSelector(selectedFormData);
 
-  const arr = [
-    { name: "Title", type: "name", id: "name" },
-    { name: "Description", type: "name", id: "desc" },
-    { name: "Url", type: "url", id: "url" },
-  ];
+  const { form, onChanged, error, setShow } = useForm({
+    Title: formData?.Title || "",
+    Description: formData?.Description || "",
+    Url: formData?.Url || "",
+  });
 
   const onSubmits = (e) => {
     e.preventDefault();
-    if (form.Title !== "" && form.Url !== "" && form.Description.length < 5) {
+    if (
+      form?.Title !== "" &&
+      form?.Url !== "" &&
+      form?.Description.length > 4
+    ) {
       setShow(false);
-      dispatch(addData(form));
       dispatch(addStep(1));
+      dispatch(addData(form));
     } else {
       setShow(true);
     }
@@ -38,8 +43,15 @@ function Step1() {
       <div className="flex flex-col items-center">
         <SolarvisLogo />
         <div className="flex flex-col">
-          {arr.map((inp) => {
-            return <StepInput inp={inp} form={form} onChanged={onChanged} />;
+          {step1?.map((inp) => {
+            return (
+              <StepInput
+                key={inp.id}
+                inp={inp}
+                form={form}
+                onChanged={onChanged}
+              />
+            );
           })}
           {error}
         </div>

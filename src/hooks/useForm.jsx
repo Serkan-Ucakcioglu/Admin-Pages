@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function useForm(props) {
+function useForm(props, data) {
   const [form, setForm] = useState({ ...props });
   const [show, setShow] = useState(false);
 

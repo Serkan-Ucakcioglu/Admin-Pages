@@ -6,7 +6,7 @@ const initialState = {
   user: user || null,
   formErr: false,
   step: 0,
-  formData: [],
+  formData: {},
 };
 
 export const loginSlice = createSlice({
@@ -34,7 +34,7 @@ export const loginSlice = createSlice({
       state.step = state.step = payload;
     },
     addData: (state, { payload }) => {
-      state.formData.push(payload);
+      state.formData = payload;
     },
   },
 });
