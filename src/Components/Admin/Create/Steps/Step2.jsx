@@ -1,14 +1,19 @@
 import React from "react";
 import StepBtns from "../StepBtns";
-import { useDispatch } from "react-redux";
-import { addData, addStep } from "../../../../Features/loginSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addData,
+  addStep,
+  selectedFormData,
+} from "../../../../Features/loginSlice";
 import SolarvisLogo from "../../../../assets/SolarvisLogo";
 import StepInput from "./StepInput";
 import useForm from "../../../../hooks/useForm";
+import { step2 } from "../../../../Data/data";
 
 function Step2() {
   const dispatch = useDispatch();
-
+  const formData = useSelector(selectedFormData);
   const { form, onChanged, error, setShow } = useForm({
     Phone: "",
     Email: "",
@@ -26,11 +31,6 @@ function Step2() {
     }
   };
 
-  const arr = [
-    { name: "Phone", type: "phone", id: "Phone" },
-    { name: "Email", type: "email", id: "Email" },
-    { name: "Adress", type: "name", id: "Adress" },
-  ];
   return (
     <form
       className="flex flex-col justify-center items-center"
@@ -39,7 +39,7 @@ function Step2() {
       <div className="flex flex-col items-center">
         <SolarvisLogo />
         <div className="flex flex-col">
-          {arr.map((inp) => {
+          {step2?.map((inp) => {
             return (
               <StepInput
                 key={inp.id}
