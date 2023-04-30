@@ -23,7 +23,7 @@ function Section() {
   };
 
   return (
-    <div className="flex gap-y-5 flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center">
       {pages[page]}
       <div className="flex gap-x-4 mt-8">
         <button
