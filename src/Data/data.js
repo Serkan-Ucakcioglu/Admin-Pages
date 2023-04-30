@@ -22,5 +22,5 @@ export const step1 = [
 export const step2 = [
   { name: "Phone", type: "phone", id: "Phone", placeHolder: "Phone" },
   { name: "Email", type: "email", id: "Email", placeHolder: "Email" },
-  { name: "Adress", type: "name", id: "Adress", placeHolder: "Adress" },
+  { name: "Adress", type: "text", id: "Adress", placeHolder: "Adress" },
 ];

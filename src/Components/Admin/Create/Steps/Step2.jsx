@@ -17,14 +17,12 @@ function Step2() {
   const { form, onChanged, error, setShow } = useForm({
     Phone: formData[1]?.Phone || 0,
     Email: formData[1]?.Email || "",
-    Adress: formData[1].Adress || "",
+    Adress: formData[1]?.Adress || "",
   });
-
-  console.log(formData, "formData");
 
   const onSubmits = (e) => {
     e.preventDefault();
-    if (form.Phone !== "" && form.Email !== "" && form.Adress.length > 5) {
+    if (form.Phone !== "" && form.Email !== "" && form?.Adress?.length > 5) {
       setShow(false);
       dispatch(addData(form));
       dispatch(addStep(2));

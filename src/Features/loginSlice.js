@@ -6,7 +6,7 @@ const initialState = {
   user: user || null,
   formErr: false,
   step: 0,
-  formData: [],
+  formData: localStorage.getItem("data") || [],
 };
 
 export const loginSlice = createSlice({
@@ -35,6 +35,9 @@ export const loginSlice = createSlice({
     },
     addData: (state, { payload }) => {
       state.formData.push(payload);
+      if (state.step == 2) {
+        localStorage.setItem("data", JSON.stringify(state.formData));
+      }
     },
   },
 });
