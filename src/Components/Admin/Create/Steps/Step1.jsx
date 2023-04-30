@@ -7,7 +7,7 @@ import useForm from "../../../../hooks/useForm";
 
 function Step1() {
   const dispatch = useDispatch();
-  const { form, onChanged, error, show, setShow } = useForm({
+  const { form, onChanged, error, setShow } = useForm({
     Title: "",
     Description: "",
     Url: "",
@@ -56,7 +56,7 @@ function Step1() {
               </div>
             );
           })}
-          <span className="text-red-500">{show && error}</span>
+          {error}
         </div>
       </div>
       <StepBtns />
