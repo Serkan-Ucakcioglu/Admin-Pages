@@ -1,6 +1,15 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectedStep } from "../../../Features/loginSlice";
 
-function StepBtns({ setStep, step }) {
+function StepBtns() {
+  const step = useSelector(selectedStep);
+
+  const dispatch = useDispatch();
+
+  const prev = () => {
+    dispatch(addStep(step - 1));
+  };
   return (
     <>
       <div className="flex gap-4 mt-8">
@@ -9,7 +18,7 @@ function StepBtns({ setStep, step }) {
             step == 0 ? "opacity-50" : ""
           }`}
           disabled={step == 0}
-          onClick={() => setStep((step) => step - 1)}
+          onClick={prev}
         >
           Prev
         </button>

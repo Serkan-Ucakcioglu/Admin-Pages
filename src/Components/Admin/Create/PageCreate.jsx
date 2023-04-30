@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import StepBtns from "./StepBtns";
+import React from "react";
 import Step1 from "./Steps/Step1";
 import Step2 from "./Steps/Step2";
 import Step3 from "./Steps/Step3";
+import { useSelector } from "react-redux";
+import { selectedStep } from "../../../Features/loginSlice";
 
 function PageCreate() {
-  const [step, setStep] = useState(0);
-
+  const step = useSelector(selectedStep);
   const steps = {
     0: <Step1 />,
     1: <Step2 />,
@@ -30,7 +30,6 @@ function PageCreate() {
         </h1>
       </div>
       <>{steps[step]}</>
-      <StepBtns setStep={setStep} step={step} />
     </div>
   );
 }

@@ -5,6 +5,7 @@ const user = JSON.parse(localStorage.getItem("user"));
 const initialState = {
   user: user || null,
   formErr: false,
+  step: 0,
 };
 
 export const loginSlice = createSlice({
@@ -28,10 +29,14 @@ export const loginSlice = createSlice({
       state.user = state.user = null;
       localStorage.removeItem("user");
     },
+    addStep: (state, { payload }) => {
+      state.step = state.step = payload;
+    },
   },
 });
 
-export const { loginCheck, logOut } = loginSlice.actions;
+export const { loginCheck, logOut, addStep } = loginSlice.actions;
 export const selectedUser = (state) => state.loginSlice.user;
 export const selectedErr = (state) => state.loginSlice.formErr;
+export const selectedStep = (state) => state.loginSlice.step;
 export default loginSlice.reducer;
