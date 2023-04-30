@@ -14,7 +14,7 @@ function PageCreate() {
   };
 
   return (
-    <div className="flex  flex-col gap-y-4 items-center mt-4">
+    <div className="flex flex-col gap-y-4 items-center mt-4">
       <h1 className="text-center text-3xl font-bold">Create Pages</h1>
       <div className="flex items-center gap-x-4">
         <h1 className={`${step == 0 && "bg-blue-500 text-white p-1 rounded"}`}>
