@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { addData, addStep } from "../../../../Features/loginSlice";
 import SolarvisLogo from "../../../../assets/SolarvisLogo";
 import useForm from "../../../../hooks/useForm";
+import StepInput from "./StepInput";
 
 function Step1() {
   const dispatch = useDispatch();
@@ -31,31 +32,14 @@ function Step1() {
   };
   return (
     <form
-      className="flex flex-col justify-center items-center"
+      className="flex mt-4 flex-col justify-center items-center"
       onSubmit={onSubmits}
     >
       <div className="flex flex-col items-center">
         <SolarvisLogo />
         <div className="flex flex-col">
           {arr.map((inp) => {
-            return (
-              <div className="mb-4" key={inp.id}>
-                <label
-                  htmlFor={inp.id}
-                  className="block text-left text-sm font-semibold text-gray-800"
-                >
-                  {inp.name}
-                </label>
-                <input
-                  id={inp.id}
-                  value={form[inp?.title]}
-                  type={inp.type}
-                  name={inp.name}
-                  onChange={onChanged}
-                  className="block w-full outline-none px-4 py-2 mt-2 bg-white border rounded-md hover:border-black"
-                />
-              </div>
-            );
+            return <StepInput inp={inp} form={form} onChanged={onChanged} />;
           })}
           {error}
         </div>
