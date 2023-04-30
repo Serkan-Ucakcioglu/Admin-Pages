@@ -10,8 +10,13 @@ function Step1() {
     dispatch(addStep(1));
   };
   return (
-    <form onSubmit={onSubmits}>
-      <h1>step1</h1>
+    <form
+      className="flex flex-col justify-center items-center"
+      onSubmit={onSubmits}
+    >
+      <div className="flex">
+        <h1>step1</h1>
+      </div>
       <StepBtns />
     </form>
   );
