@@ -30,18 +30,20 @@ function Section() {
           className={`bg-blue-500 p-1 rounded hover:bg-blue-700 text-white ${
             page == 0 ? "opacity-50" : ""
           }`}
+          disabled={page == 0}
           onClick={prev}
         >
-          prev
+          Prev
         </button>
         ---
         <button
           className={`bg-blue-500 p-1 rounded hover:bg-blue-700 text-white ${
             page == 1 ? "opacity-50" : ""
           }`}
+          disabled={page == 1}
           onClick={next}
         >
-          next
+          Next
         </button>
       </div>
     </div>
