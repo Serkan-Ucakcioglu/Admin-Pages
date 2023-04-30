@@ -23,9 +23,9 @@ function Section() {
   };
 
   return (
-    <div className="flex  flex-col justify-center items-center">
+    <div className="flex gap-y-5 flex-col justify-center items-center">
       {pages[page]}
-      <div className="flex gap-x-4">
+      <div className="flex gap-x-4 mt-8">
         <button
           className={`bg-blue-500 p-1 rounded hover:bg-blue-700 text-white ${
             page == 0 ? "opacity-50" : ""
