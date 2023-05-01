@@ -21,7 +21,6 @@ function Section() {
       setPage((page) => page + 1);
     }
   };
-
   return (
     <div className="flex flex-col justify-center items-center">
       {pages[page]}
