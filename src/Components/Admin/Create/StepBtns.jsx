@@ -4,7 +4,6 @@ import { addStep, selectedStep } from "../../../Features/loginSlice";
 
 function StepBtns() {
   const step = useSelector(selectedStep);
-
   const dispatch = useDispatch();
 
   const prev = () => {
