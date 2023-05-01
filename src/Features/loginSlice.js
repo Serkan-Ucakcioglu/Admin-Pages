@@ -5,7 +5,7 @@ const initialState = {
   user: user || null,
   formErr: false,
   step: 0,
-  formData: localStorage.getItem("data") || [],
+  formData: JSON.parse(localStorage.getItem("data")) || [],
 };
 
 export const loginSlice = createSlice({
