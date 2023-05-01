@@ -34,7 +34,6 @@ export const loginSlice = createSlice({
     },
     addData: (state, { payload }) => {
       state.formData.push(payload);
-
       if (state.step == 2) {
         return localStorage.setItem("data", JSON.stringify(state.formData));
       }
