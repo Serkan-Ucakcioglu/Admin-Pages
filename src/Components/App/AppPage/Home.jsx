@@ -1,15 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { selectedFormData } from "../../../Features/loginSlice";
+
 function Home() {
   const formData = useSelector(selectedFormData)[0];
-
   return (
     <>
       <h1 className="text-2xl mt-2 text-center font-extrabold">
         {formData?.Title}
       </h1>
-
       <div className="flex h-[600px] mt-8 justify-center flex-col">
         <div className="flex flex-col justify-center items-center">
           <img
