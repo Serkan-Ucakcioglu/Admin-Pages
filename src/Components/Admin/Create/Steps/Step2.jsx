@@ -24,8 +24,8 @@ function Step2() {
     e.preventDefault();
     if (form.Phone !== "" && form.Email !== "" && form?.Adress?.length > 5) {
       setShow(false);
-      dispatch(addData(form));
       dispatch(addStep(2));
+      dispatch(addData(form));
     } else {
       setShow(true);
     }

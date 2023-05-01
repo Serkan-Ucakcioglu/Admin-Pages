@@ -1,5 +1,4 @@
 import React from "react";
-import StepBtns from "../StepBtns";
 import { useDispatch, useSelector } from "react-redux";
 import { addStep, selectedFormData } from "../../../../Features/loginSlice";
 import SolarvisLogo from "../../../../assets/SolarvisLogo";
