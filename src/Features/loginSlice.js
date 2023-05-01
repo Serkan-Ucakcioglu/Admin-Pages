@@ -23,7 +23,6 @@ export const loginSlice = createSlice({
       } else {
         state.formErr = true;
       }
-      return;
     },
     logOut: (state) => {
       state.user = state.user = null;

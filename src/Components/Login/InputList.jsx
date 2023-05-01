@@ -38,9 +38,8 @@ function InputList() {
           Email
         </label>
         <input
-          value={login.email}
+          value={login?.email}
           type="email"
-          pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
           name="email"
           onChange={onChanged}
           className="block w-full outline-none px-4 py-2 mt-2 bg-white border rounded-md hover:border-black"
@@ -54,7 +53,7 @@ function InputList() {
           Password
         </label>
         <input
-          value={login.password}
+          value={login?.password}
           type="password"
           name="password"
           onChange={onChanged}
