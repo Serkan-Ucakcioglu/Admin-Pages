@@ -24,7 +24,7 @@ function InputList() {
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(loginCheck(login));
-    if (!formErr) {
+    if (formErr == false) {
       return navigate("/admin");
     }
   };
