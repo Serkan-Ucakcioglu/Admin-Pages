@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginCheck, selectedErr } from "../../Features/loginSlice";
 import { useNavigate } from "react-router-dom";
@@ -25,7 +25,7 @@ function InputList() {
     e.preventDefault();
     dispatch(loginCheck(login));
     if (!formErr) {
-      navigate("/admin");
+      return navigate("/admin");
     }
   };
   return (
