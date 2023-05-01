@@ -8,7 +8,7 @@ function App() {
   const formData = useSelector(selectedFormData);
   return (
     <>
-      {!!formData.length && (
+      {formData && (
         <>
           {" "}
           <Header />
