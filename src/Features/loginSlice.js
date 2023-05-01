@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const user = JSON.parse(localStorage.getItem("user"));
-
 const initialState = {
   user: user || null,
   formErr: false,
@@ -42,9 +41,11 @@ export const loginSlice = createSlice({
   },
 });
 
-export const { loginCheck, logOut, addStep, addData } = loginSlice.actions;
+// selected state list
 export const selectedUser = (state) => state.loginSlice.user;
 export const selectedErr = (state) => state.loginSlice.formErr;
 export const selectedStep = (state) => state.loginSlice.step;
 export const selectedFormData = (state) => state.loginSlice.formData;
+
+export const { loginCheck, logOut, addStep, addData } = loginSlice.actions;
 export default loginSlice.reducer;
