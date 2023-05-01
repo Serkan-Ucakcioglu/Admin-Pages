@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const user = JSON.parse(localStorage.getItem("user"));
 const initialState = {
   user: user || null,
-  formErr: false,
+  formErr: null,
   step: 0,
   formData: JSON.parse(localStorage.getItem("data")) || [],
 };
@@ -13,6 +13,8 @@ export const loginSlice = createSlice({
   initialState,
   reducers: {
     loginCheck: (state, { payload }) => {
+      console.log(state.formErr, "form");
+
       if (
         payload.email == "solarvis@gmail.com" &&
         payload.password == "solarvis123"

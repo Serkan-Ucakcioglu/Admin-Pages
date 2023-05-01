@@ -29,7 +29,7 @@ function InputList() {
     }
   };
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} autoComplete="off">
       <div className="mb-4">
         <label
           htmlFor="email"
@@ -55,9 +55,10 @@ function InputList() {
         <input
           value={login?.password}
           type="password"
+          autoComplete="off"
           name="password"
           onChange={onChanged}
-          className="block w-full px-4 outline-none py-2 mt-2  bg-white border rounded-md hover:border-black"
+          className="block w-full px-4 outline-none py-2 mt-2 bg-white border rounded-md hover:border-black"
         />
       </div>
       <div className="mt-3">
