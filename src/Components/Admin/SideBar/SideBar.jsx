@@ -11,6 +11,7 @@ function SideBar() {
   const logOuts = () => {
     dispatch(logOut());
   };
+
   return (
     <>
       <div className="w-[230px] bg-gray-800 shadow-2xl h-screen p-3">
