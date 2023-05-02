@@ -4,7 +4,6 @@ import About from "./About";
 
 function Section() {
   const [page, setPage] = useState(0);
-
   const pages = {
     0: <Home />,
     1: <About />,

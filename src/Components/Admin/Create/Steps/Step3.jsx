@@ -1,13 +1,12 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addStep, selectedFormData } from "../../../../Features/loginSlice";
+import { useDispatch } from "react-redux";
+import { addStep } from "../../../../Features/loginSlice";
 import SolarvisLogo from "../../../../assets/SolarvisLogo";
 import Success from "../../../../assets/Success";
 import { Link } from "react-router-dom";
 
 function Step3() {
   const dispatch = useDispatch();
-  const formData = useSelector(selectedFormData);
   const onSubmits = (e) => {
     e.preventDefault();
     dispatch(addStep(2));
