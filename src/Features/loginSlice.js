@@ -13,8 +13,6 @@ export const loginSlice = createSlice({
   initialState,
   reducers: {
     loginCheck: (state, { payload }) => {
-      console.log(state.formErr, "form");
-
       if (
         payload.email == "solarvis@gmail.com" &&
         payload.password == "solarvis123"
