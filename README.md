@@ -1,5 +1,4 @@
 # Admin Page
-
 ### Login Page
 <img width="853" alt="image" src="https://user-images.githubusercontent.com/98692987/235356944-c9cedf31-3865-43dd-82b7-c8fb2753f51f.png">
 
